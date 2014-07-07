@@ -10,6 +10,7 @@ class Main
         var container : GfxContainer = new GfxContainer();
         var parser : GfxParser = new GfxParser('dummy.svg');
 
+        trace('Parser: ');
         trace(parser);
 
         var line : Line = new Line();

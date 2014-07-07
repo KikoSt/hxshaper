@@ -35,6 +35,23 @@ class GfxDataSourceFile extends GfxDataSource
 
     public override function toString() : String
     {
+        var root : Iterator<Xml> = this.xmlData.firstChild().elements();
+        trace('\n-------------------------------------------------\n');
+        for(elem in root) {
+            trace('[  ' + elem + '  ]\n');
+        }
+        trace('\n-------------------------------------------------\n');
         return(this.xmlData.toString());
     }
+
+    public function getDefs()
+    {
+        return(this.xmlData.elementsNamed('defs'));
+    }
+
+    public function getGraphic()
+    {
+        return(this.xmlData.elementsNamed('g'));
+    }
+
 }

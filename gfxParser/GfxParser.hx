@@ -15,7 +15,13 @@ class GfxParser
 
     public function toString() : String
     {
-        return(this.dataSource.toString());
+        var output : String = '\n\n';
+        output += ('DEFS: ' + this.dataSource.getDefs());
+        output += '\n\n';
+        output += ('GRAPHICS: ' + this.dataSource.getGraphic());
+        output += '\n\n';
+     //   return(this.dataSource.toString());
+        return(output);
     }
 
 
